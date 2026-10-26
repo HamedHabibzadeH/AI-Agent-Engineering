@@ -5,19 +5,25 @@ def main():
     agent = SimpleAgent()
 
     print("Simple Agent Started")
+    print("Type 'help' to see available tools.")
+    print("Type 'exit' to stop the program.")
+    available_tools = ", ".join(agent.tools.keys())
 
     while True:
         action = input(
-            "\nEnter action (add, subtract, multiply, divide, exit): "
+            f"\nEnter action {available_tools}, help, exit: "
         ).strip().lower()
 
         if action == "exit":
             print("Agent stopped.")
             break
-
+        if action == "help":
+            print(agent.get_tool_descriptions())
+            continue
+        if action not in agent.tools:
+            print(f"Error: Unknown tool '{action}'")
+            continue
         try:
-            if action not in agent.tools:
-                raise ValueError("Unknown tool")
 
             a = float(input("Enter first number: "))
             b = float(input("Enter second number: "))
