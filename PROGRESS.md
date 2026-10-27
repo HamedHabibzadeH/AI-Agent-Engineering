@@ -5,29 +5,32 @@
 **Next action:** Implement and review calculation history, then continue to Week 01 Lesson 2 (OOP).
 
 ## Status legend
+
 - [x] Completed and verified
 - [ ] Not yet completed or not yet verified
 
 ## Week 01 — Python Software Engineering
 
 ### Lesson 1: Modules, packages and tool registry
-- [x] Create the `week-01-python-engineering/simple_agent` project structure.
-- [x] Implement `main.py`, `core/agent.py`, and `tools/calculator.py`.
-- [x] Add calculator tools including `power`.
-- [x] Implement tool descriptions / `help` command.
-- [x] Run the agent and resolve the `None` output issue.
-- [x] Initialize Git and push commits to GitHub.
-- [ ] Implement `history` for successful calculations.
-- [ ] Review history implementation and edge cases.
 
-### Remaining Week 01 topics
-- [ ] Lesson 2: OOP and professional agent class design.
-- [ ] Type hints and exception design.
-- [ ] Virtual environments, dependencies and secrets.
-- [ ] REST/HTTP and introductory async.
-- [ ] Basic testing, documentation and Week 01 review.
+Status: Completed
+
+Completed:
+
+- Modular Python project structure (basics of python engineering)
+- SimpleAgent class and Tool Registry
+- Calculator tools
+- Error handling
+- Calculation history (in-memory state)
+- Manual testing
+
+### Next Step
+
+Understand the advantages of class-based tools
+and implement a reusable Tool interface.
 
 ## Weeks 02–16
+
 - [ ] Week 02 — LLM foundations
 - [ ] Week 03 — Tool calling and agent loop
 - [ ] Week 04 — Memory, embeddings and RAG
@@ -45,6 +48,7 @@
 - [ ] Week 16 — Portfolio and interview preparation
 
 ## Session handoff
+
 **Resume instruction:** Continue from the first unchecked task in Week 01. Do not change the sequence in `ROADMAP.md` for debugging or side discussions.
 
 **When finishing a session:** Update the completed checkboxes, the current position, the next action and the review date; commit `PROGRESS.md` to GitHub.

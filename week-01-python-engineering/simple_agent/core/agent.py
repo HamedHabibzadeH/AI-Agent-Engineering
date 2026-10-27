@@ -20,6 +20,8 @@ class SimpleAgent:
             "power": "Raises the first number to the power of the second.",
         }
 
+        self.history = []
+
     def run(self, action, a, b):
         if action not in self.tools:
             raise ValueError(
@@ -27,6 +29,17 @@ class SimpleAgent:
                 f"Available actions: {list(self.tools.keys())}")
 
         tool = self.tools[action]
+        result = tool(a, b)
+
+        record = {
+            "action": action,
+            "a": a,
+            "b": b,
+            "result": result
+        }
+
+        if result != "Error: Division by zero is not allowed.":
+            self.history.append(record)
         return tool(a, b)
 
     def get_tool_descriptions(self, action=None):
