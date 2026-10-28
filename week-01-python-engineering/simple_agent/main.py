@@ -1,8 +1,11 @@
 from core.agent import SimpleAgent
+from tools.base_tool import AddTool, SubtractTool, MultiplyTool, DivideTool, PowerTool
 
 
 def main():
-    agent = SimpleAgent()
+    tools = [AddTool(), SubtractTool(), MultiplyTool(),
+             DivideTool(), PowerTool()]
+    agent = SimpleAgent(tools)
 
     print("Simple Agent Started")
     print("Type 'help' to see available tools.")
