@@ -1,9 +1,9 @@
 class BaseTool:
-    def __init__(self, name, description):
+    def __init__(self, name: str, description: str) -> None:
         self.name = name
         self.description = description
 
-    def execute(self, *args, **kwargs):
+    def execute(self, *args: float, **kwargs) -> float:
         raise NotImplementedError(
             "Subclasses must implement execute()"
         )

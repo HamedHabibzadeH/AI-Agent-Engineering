@@ -17,17 +17,27 @@ Status: Completed
 
 Completed:
 
-- Modular Python project structure (basics of python engineering)
-- SimpleAgent class and Tool Registry
-- Calculator tools
-- Error handling
-- Calculation history (in-memory state)
-- Manual testing
+Lesson 01: Modular SimpleAgent with calculator tools
+
+Lesson 02: Object-Oriented Programming
+
+BaseTool inheritance and polymorphism
+
+Dependency Injection and dynamic Tool Registry
+
+Tool metadata and descriptions
+
+Agent history and error handling
+
+Independent Agent state verification
 
 ### Next Step
 
-Understand the advantages of class-based tools
-and implement a reusable Tool interface.
+Lesson 03: Python Type Hints
+
+Structured testing with pytest
+
+Remaining Week 01 engineering topics
 
 ## Weeks 02–16
 
