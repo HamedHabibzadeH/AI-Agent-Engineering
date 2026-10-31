@@ -1,5 +1,8 @@
 from tools.base_tool import BaseTool, AddTool, SubtractTool,  MultiplyTool, DivideTool, PowerTool
 from core.models import AgentRecord
+from logging import getLogger
+
+logger = getLogger(__name__)
 
 
 class SimpleAgent:
@@ -32,13 +35,12 @@ class SimpleAgent:
 
         tool = self.tools[action]
         result = tool.execute(a, b)
-
+        logger.info("Tool '%s' executed successfully", action)
         record = AgentRecord(
             action=action,
             a=a,
             b=b,
             result=result)
 
-        if result != "Error: Division by zero is not allowed.":
-            self.history.append(record)
+        self.history.append(record)
         return result

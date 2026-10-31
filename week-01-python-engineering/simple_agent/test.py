@@ -1,8 +1,14 @@
 from core.agent import SimpleAgent
-from tools.base_tool import AddTool, MultiplyTool
+from tools.base_tool import DivideTool
 
-agent = SimpleAgent([AddTool(), MultiplyTool()])
+agent = SimpleAgent([DivideTool()])
 
-print(agent.get_tool_descriptions("add"))
-print(agent.get_tool_descriptions("unknown"))
-print(agent.get_tool_descriptions())
+try:
+    result = agent.run("divide", 10, 0)
+    print(result)
+
+except ZeroDivisionError as error:
+    print(f"Caught error: {error}")
+
+print("Agent is still running.")
+print("History:", agent.history)
